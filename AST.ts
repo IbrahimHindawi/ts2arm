@@ -3,7 +3,10 @@ interface AST { equals(node: AST): boolean; } // interface
 export 
 class Number implements AST {
     constructor(public value: number) {}
-    equals(other: AST) { if(this == other) { return true; } else { return false; } }
+    // equals(other: AST) { if (this == other) { return true; } else { return false; } }
+    // equals(other: AST) { if (this.value == other.value) { return true; } else { return false; } }
+    // equals(other: AST) { return this.value === other.value; }
+    equals(other: AST) { return other instanceof Number && this.value === other.value; }
 }
 
 export 
@@ -14,7 +17,7 @@ class Id implements AST {
 
 export 
 class Not implements AST {
-    constructor(public term: AST) {} // some polymorphic magic
+    constructor(public term: AST) {} // some polymorphic magic??
     equals(other: AST) { if(this == other) { return true; } else { return false; } }
 }
 
