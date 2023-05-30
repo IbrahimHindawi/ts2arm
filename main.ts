@@ -12,4 +12,3 @@ console.log(typeof c);
 console.log(d);
 console.log(a.value === b.value);
 
-
