@@ -9,49 +9,49 @@ class Number implements AST {
 export 
 class Id implements AST {
     constructor(public value: string) {}
-    equals(other: AST) { return other instanceof Id && other.value === this.value; }
+    equals(other: AST): boolean { return other instanceof Id && other.value === this.value; }
 }
 
 export 
 class Not implements AST {
     constructor(public term: AST) {} // some polymorphic magic??
-    equals(other: AST) { return other instanceof Not && other.term === this.term; }
+    equals(other: AST): boolean { return other instanceof Not && other.term === this.term; }
 }
 
 export 
 class Equal implements AST {
     constructor(public left: AST, public right: AST) {}
-    equals(other: AST) { return other instanceof Equal && other.left === this.left && other.right === this.right; }
+    equals(other: AST): boolean { return other instanceof Equal && other.left === this.left && other.right === this.right; }
 }
 
 export 
 class NotEqual implements AST {
     constructor(public left: AST, public right: AST) {}
-    equals(other: AST) { return other instanceof NotEqual && other.left === this.left && other.right === this.right; }
+    equals(other: AST): boolean { return other instanceof NotEqual && other.left === this.left && other.right === this.right; }
 }
 
 export 
 class Add implements AST {
     constructor(public left: AST, public right: AST) {}
-    equals(other: AST) { return other instanceof Add && other.left === this.left && other.right === this.right; }
+    equals(other: AST): boolean { return other instanceof Add && other.left === this.left && other.right === this.right; }
 }
 
 export 
 class Subtract implements AST {
     constructor(public left: AST, public right: AST) {}
-    equals(other: AST) { return other instanceof Subtract && other.left === this.left && other.right === this.right; }
+    equals(other: AST): boolean { return other instanceof Subtract && other.left === this.left && other.right === this.right; }
 }
 
 export 
 class Multiply implements AST {
     constructor(public left: AST, public right: AST) {}
-    equals(other: AST) { return other instanceof Multiply && other.left === this.left && other.right === this.right; }
+    equals(other: AST): boolean { return other instanceof Multiply && other.left === this.left && other.right === this.right; }
 }
 
 export 
 class Divide implements AST {
     constructor(public left: AST, public right: AST) {}
-    equals(other: AST) { return other instanceof Divide && other.left === this.left && other.right === this.right; }
+    equals(other: AST): boolean { return other instanceof Divide && other.left === this.left && other.right === this.right; }
 }
 
 export 
