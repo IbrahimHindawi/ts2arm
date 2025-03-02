@@ -67,3 +67,8 @@ class Call implements AST {
     }
 }
 
+export
+class Return implements AST {
+    constructor(public term: AST) {}
+    equals(other: AST) { if(this == other) { return true; } else { return false; } }
+}
