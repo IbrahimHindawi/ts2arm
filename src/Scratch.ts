@@ -23,6 +23,7 @@ class Pair {
     }
 }
 */
+export
 class Pair {
     static zero = 0;
     static origin() {
