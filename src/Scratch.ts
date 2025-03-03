@@ -58,23 +58,24 @@ function flet() {
     console.log(x); // let is scope level therefore x = 1
 }
 
-console.log("hell");
-console.log(`2 + 2 = ${2 + 2}`);
+//console.log("hell");
+//console.log(`2 + 2 = ${2 + 2}`);
+//
+//console.log(`
+//this
+//   is
+//some
+//   magic
+//`);
+//console.assert(2 === 2)
 
-console.log(`
-this
-   is
-some
-   magic
-`);
-console.assert(2 === 2)
 // console.assert(2 === 1)
 // throw Error("Error messages go here!")
-let n = add(1, 1);
-console.log(n);
+//let n = add(1, 1);
+//console.log(n);
 
-let m = add_lambda(1, 1);
-console.log(m);
+//let m = add_lambda(1, 1);
+//console.log(m);
 
 let array: Array<number> = [1, 2, 3];
 
@@ -85,4 +86,3 @@ if (result != null) {
 }
 
 let origin = new Pair(0, 0);
-
